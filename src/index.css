@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './styles/animations.css';
+@import './styles/theme.css';
+@import './styles/layout.css';
+@import './styles/print.css';
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-facebook-text antialiased;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Focus styles */
+:focus-visible {
+  @apply outline-none ring-2 ring-facebook-primary ring-offset-2;
+}
+
+/* Selection styles */
+::selection {
+  @apply bg-facebook-primary/20 text-facebook-primary;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400 transition-colors;
+}

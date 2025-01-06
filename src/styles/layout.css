@@ -1,0 +1,42 @@
+/* Container */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Grid layouts */
+.grid-auto-fit {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+/* Flex layouts */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+/* Spacing utilities */
+.section {
+  @apply py-12 sm:py-16 lg:py-20;
+}
+
+.section-sm {
+  @apply py-8 sm:py-12;
+}
+
+/* Responsive padding */
+.responsive-padding {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-white bg-opacity-70 backdrop-blur-lg;
+}
+
+/* Floating elements */
+.floating {
+  @apply shadow-lg hover:shadow-xl transition-shadow duration-200;
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Receipt Tracker</title>
+    <style>
+      @media print {
+        /* Hide browser header/footer */
+        @page {
+          size: A4;
+          margin: 0 !important;
+        }
+        /* Hide title in print */
+        title {
+          display: none;
+        }
+        /* Ensure content fits within page */
+        body {
+          margin: 0.5cm !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

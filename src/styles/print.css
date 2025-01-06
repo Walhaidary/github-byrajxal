@@ -1,0 +1,119 @@
+/* Reset page margins */
+@page {
+  size: A4;
+  margin: 0.5cm;
+}
+
+/* Basic reset */
+@media print {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide all navigation and UI elements */
+  nav,
+  header,
+  button,
+  .print\\:hidden,
+  .print\\:!hidden,
+  [role="navigation"],
+  [role="tablist"],
+  [role="tab"],
+  .nav-tabs,
+  .tab-content > .tab-pane,
+  .filters-section,
+  .MainNavbar,
+  .SecondaryNavbar,
+  .HorizontalNav,
+  .UserMenu,
+  .navigation-controls,
+  .blue-header,
+  /* Add specific header elements */
+  div[class*="bg-blue-600"],
+  div[class*="bg-[#0079BD]"],
+  .main-header,
+  .app-header,
+  .search-bar,
+  .user-controls {
+    display: none !important;
+  }
+
+  /* Show print elements */
+  .print\\:block,
+  .print\\:!block {
+    display: block !important;
+  }
+
+  /* Remove margins and padding */
+  .print\\:m-0 {
+    margin: 0 !important;
+  }
+
+  .print\\:p-0 {
+    padding: 0 !important;
+  }
+
+  /* Typography for print */
+  .print\\:text-xs {
+    font-size: 8pt !important;
+    line-height: 1.2 !important;
+  }
+
+  .print\\:text-sm {
+    font-size: 9pt !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Table styles */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    page-break-inside: auto !important;
+  }
+
+  tr {
+    page-break-inside: avoid !important;
+    page-break-after: auto !important;
+  }
+
+  th, td {
+    padding: 0.1cm !important;
+    border-color: #ddd !important;
+    font-size: 8pt !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Remove backgrounds and shadows */
+  * {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Ensure page breaks */
+  .page-break-before {
+    page-break-before: always !important;
+  }
+
+  .page-break-after {
+    page-break-after: always !important;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid !important;
+  }
+
+  /* Reset spacing after hiding header */
+  .min-h-screen {
+    min-height: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Remove any remaining header margins */
+  .max-w-7xl {
+    margin-top: 0 !important;
+  }
+}
